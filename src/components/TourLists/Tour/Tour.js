@@ -6,11 +6,13 @@ const Tour = (props) => {
     const [showInfo, setShowInfo] = useState(false);
 
     const {id, city, img, name, info} = props.tour;
-    const { removeTour } = props.removeTour;
+    const { removeTour } = props;
 
     const toggleInfo = () => {
         setShowInfo(showInfo => !showInfo);
     };
+
+
     
     return (
         <article className="tour">
@@ -18,7 +20,7 @@ const Tour = (props) => {
                 <img src={img} alt={name} />
             
                 <span className="close__btn">
-                    <FaWindowClose />
+                    <FaWindowClose onClick={() => removeTour(id)} />
                 </span>
             </div>
 
