@@ -9,12 +9,12 @@ const Navbar = () => {
             <Link to="/"><img src={logo} alt="Logo" /></Link>
 
             <ul>
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/tours">Tours</NavLink></li>
+                <li><NavLink className="nav__link" to="/">Home</NavLink></li>
+                <li><NavLink className="nav__link" to="/about">About</NavLink></li>
+                <li><NavLink className="nav__link" to="/tours">Tours</NavLink></li>
             </ul>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
